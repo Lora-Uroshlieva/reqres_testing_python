@@ -15,14 +15,11 @@ class ReqresRestApi:
         return response.json()
 
     def create_user(self, name, job):
-        data = {
-    "name": "morpheus",
-    "job": "leader"
-}
+        data = {"name": name, "job": job}
         response = requests.post(self.url, data)
         print(data)
         print(response)
-        # return response.json()
+        return response.json()
 
     def update_user(self, job):
         pass
