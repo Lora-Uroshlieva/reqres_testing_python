@@ -1,7 +1,10 @@
+import HtmlTestRunner
 import unittest
 import datetime
 import os
 from api_helper import ReqresRestApi
+import HtmlTestRunner
+
 
 api = ReqresRestApi()
 
@@ -56,5 +59,5 @@ class UserTest(unittest.TestCase):
         self.assertTrue(os.path.isfile(path))
 
 
-if __name__ == "__main__":
-    unittest.main(verbosity=2)
+if __name__ == '__main__':
+    unittest.main(verbosity=3, testRunner=HtmlTestRunner.HTMLTestRunner(output='reports'))
